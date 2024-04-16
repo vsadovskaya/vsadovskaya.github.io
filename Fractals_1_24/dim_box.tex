@@ -1,0 +1,130 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+%\userpackage{mathtools}
+
+
+\textheight25.5cm
+\textwidth17.9cm
+\hoffset=-2.7cm
+\voffset=-2.8cm
+\addtolength{\textheight}{1cm}
+\leftmargin 3cm
+\rightmargin 3cm
+
+\def\u{\bold{u}}
+\def\R{\mathbb R}
+\def\Q{\mathbb Q}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\T{\mathbb T}
+\def\O{\Omega}
+\def\o{\omega}
+\def\e{\varepsilon}
+\def\la{\lambda}
+\def\a{\alpha}
+\def\b{\beta}
+\def\det{\text{det}}
+\def\e{\epsilon}
+\def\B{\EuScript{B}}
+\def\A{\EuScript{A}}
+
+
+\pagestyle{empty}
+
+\def\QED{\hfill\hfill{\square}} 
+
+\begin{document}
+
+{\Large {\bf  Box(-counting) dimension.}}
+
+\vskip.4cm
+
+{\large  A box is an interval in $\R$, a square in $\R^2$, a cube in $\R^3$, ... .
+\vskip.1cm 
+ How many boxes with side $\e$ are needed to cover a bounded set $X$ in $\R^k$\,?
+
+Denote this number $N(\e)$.
+\vskip.2cm 
+$X=$ unit interval \,  \hskip1cm   $X=$ unit square   \hskip1cm   $X=$ unit cube\,   \hskip1.5cm   In each case,\, 
+\vskip.1cm 
+$N(\e)\approx (1/\e)^1$   \hskip1.9cm  $N(\e)\approx (1/\e)^2$   \hskip1.4cm \,$N(\e)\approx (1/\e)^3$
+\hskip1.8cm 
+$d\approx$ {\Large $\frac{\ln N(\e)}{\ln (1/\e)}$}.
+\vskip.3cm 
+
+{\bf Def.} The {\bf box(-counting) dimension}\, of a bounded set $X$ in $\R^k$  is\, 
+\vskip.1cm 
+\hskip2.5cm $\dim _B(X)=\underset{\e\to 0^+}{\lim} \;${\Large $\frac{\ln N(\e)}{\ln (1/\e)}$},\, \, \,{\it if the limit exists, }
+\vskip.1cm 
+\hskip1.3cm where $N(\e)$ is the least number of boxed with side $\e$ needed to cover $X$.
+\vskip.2cm 
+\hskip.5cm  If the limit does not exist, we consider the upper and lower box dimensions,  
+\vskip.1cm 
+ \hskip.5cm  $\overline{\dim}_B(X)$ and 
+$\underline{\dim}_B(X)$, defined as the corresponding $\liminf$ and $\limsup.$
+\vskip.4cm 
+$\bullet$\,  If the limit along a decreasing sequence $\e_n\to 0\,$ with $\e_{n+1}\ge c\e_n$\, equals $d$, 
+\vskip.1cm 
+\hskip.5cm  then  $\dim _B(X)=d.$
+\vskip.4cm 
+
+{\bf Example.}  $C =$ the Cantor set.
+\vskip.1cm 
+\hskip.5cm  At step $n$, the set $C_n$ consists of $2^n$ intervals of length $1/3^n$.\, 
+
+ \vskip.1cm 
+\hskip.5cm  So we take $\e_n=1/3^n$.
+  Then $N(\e_n)=2^n$\, and \,\,{\Large $\frac{\ln N(\e_n)}{\ln (1/\e_n)}$} = {\Large $\frac{\ln 2^n}{\ln 3^n}$} =
+ {\Large $\frac{\ln 2}{\ln 3}$}. \, 
+
+\hskip.5cm
+ Hence $\dim_B(C)=$ {\Large $\frac{\ln 2}{\ln 3}$} = $d_{sim}(C)$.
+
+\vskip.4cm 
+$\bullet$  For the examples we considered,\, it also holds that $\,\dim_B=d_{sim}$.
+\vskip.05cm 
+\hskip.6cm {\it Find their similarity and box dimensions.}
+
+\vskip.4cm 
+$\bullet$ Box dimension: pluses and minuses.
+\vskip.15cm
+\hskip.5cm $(+)$\, Relatively easy to define and to compute/estimate.
+\vskip.15cm
+\hskip.5cm $(-)$\, The limit does not necessarily exist, and we may only get liminf and limsup.
+\vskip.15cm
+\hskip.5cm $(-)$\, A countable set may have positive box dimension {\it (see next slide)},
+\vskip.02cm
+\hskip1.4cm and so adding countably many points to a set can change its box dimension.
+
+\vskip.7cm 
+
+
+$\bullet$\, {\bf Hausdorff dimension},\,  $\dim _H(X)$,\, does not have these drawbacks, 
+\vskip.02cm
+\hskip.5cm  but it is harder to define and compute/estimate.
+\vskip.1cm
+\hskip.5cm  The construction involves covering $X$ by balls of diameter {\it at most $\e$}.
+
+\vskip.3cm 
+
+
+$\bullet$\,  For any bounded set $X\subset \R^k$, \, $\dim _H(X) \le \underline{\dim}_B(x) \le \overline{\dim}_B(x)\le k$.
+\vskip.3cm 
+
+$\bullet$\, For the sets that we considered, \, $\dim _H(X) = \dim_B(X) = \dim_{sim}(X)$.
+
+}
+
+
+ \end{document}
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%
+
+
+     
+            
+

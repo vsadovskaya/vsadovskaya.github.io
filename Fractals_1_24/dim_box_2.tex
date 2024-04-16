@@ -1,0 +1,88 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+%\userpackage{mathtools}
+
+
+\textheight25.5cm
+\textwidth17.9cm
+\hoffset=-2.7cm
+\voffset=-2.8cm
+\addtolength{\textheight}{1cm}
+\leftmargin 3cm
+\rightmargin 3cm
+
+\def\u{\bold{u}}
+\def\R{\mathbb R}
+\def\Q{\mathbb Q}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\T{\mathbb T}
+\def\O{\Omega}
+\def\o{\omega}
+\def\e{\varepsilon}
+\def\la{\lambda}
+\def\a{\alpha}
+\def\b{\beta}
+\def\det{\text{det}}
+\def\e{\epsilon}
+\def\B{\EuScript{B}}
+\def\A{\EuScript{A}}
+
+
+\pagestyle{empty}
+
+\def\QED{\hfill\hfill{\square}} 
+
+\begin{document}
+
+{\large {\bf  Box dimension of countable sets.}}
+
+\vskip.5cm
+
+{\large  
+
+{\bf Example 1.}\, Let $\,X=\{0\}\cup\{\,\frac{1}{2^{n}}:\; n\in \N\,\}\,\subset \R$.
+\vskip.3cm 
+\hskip.8cm $\frac{1}{2^{n-1}}-\frac{1}{2^{n}} = \frac{1}{2^{n}}$, \, so let 
+ $\,\e_n=\frac{1}{2^{n}}$. 
+\vskip.3cm  
+\hskip.8cm  One box covers $[0,\frac{1}{2^{n}}]$, and each of $\,\frac{1}{2^{n-1}}$, $\dots$, $\frac12$, 1\, requires its own box.
+ \vskip.3cm 
+\hskip.8cm  Thus $N(\e_n)=n+1$, and 
+
+ \vskip.2cm 
+\hskip.8cm  $\dim _B(X)=\underset{n\to\infty }{\lim} \;${\Large $\frac{\ln N(\e_n)}{\ln (1/\e_n)}$} $\,=\, 
+\underset{n\to\infty }{\lim} \;${\Large $\frac{\ln (n+1)}{\ln (2^n)}$} $\,=\, 0.$
+
+\vskip.7cm
+
+{\bf Example 2.}\, Let $\,X=\{0\}\cup\{\,\frac{1}{n}:\; n\in \N\,\} \,\subset \R$.
+\vskip.3cm 
+\hskip.8cm $\frac{1}{n-1}-\frac{1}{n} = \frac{1}{(n-1)(n)} > \frac{1}{n^2}$, \, so let 
+ $\,\e_n=\frac{1}{n^2}$. 
+\vskip.3cm  
+\hskip.8cm  Each of $\,\frac{1}{n-1}$, $\dots$, $\frac12$, 1\, requires its own box,\, so $N(\e_n)\ge n$.
+\vskip.3cm  
+\hskip.8cm  Also, $n$ boxes will cover  $[0,\frac{1}{n}]$,\,  and so $N(\e)\le n+n=2n$.
+ \vskip.3cm 
+\hskip.8cm  Then  \,  {\Large $\frac12$} $\,=\,$ {\Large $\frac{\ln(n)}{\ln (n^2)}$} $\,\le\,$ {\Large $\frac{\ln N(\e_n)}{\ln (1/\e_n)}$} $\,\le\,$ {\Large $\frac{\ln(2n)}{\ln (n^2)}$} $\to$  {\Large $\frac12$}
+
+ \vskip.3cm 
+\hskip.8cm and hence  $\,\dim _B(X)=$ {\Large $\frac12$}.
+
+
+}
+
+
+ \end{document}
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%
+
+
+     
+            
+

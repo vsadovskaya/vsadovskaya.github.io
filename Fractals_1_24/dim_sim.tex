@@ -1,0 +1,76 @@
+
+\documentclass[12pt]{article}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+
+\textwidth19cm
+\hoffset=-2cm
+\addtolength{\textheight}{7cm}
+%\leftmargin 3cm
+%\rightmargin 3cm
+\voffset=-3cm
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+{\Large {\bf Similarity dimension.}
+\vskip.4cm
+
+{\large
+A line segment, a square, and a cube have dimensions 1, 2, and 3, respectively.
+\vskip.2cm
+How many copies of them are needed to build a copy scaled by a factor of 2\,?
+\vskip.1cm
+\hskip1cm Interval: $2^1=2$, \, \, square: $2^2=4$, \, \, cube: $2^3=8$
+\vskip.2cm
+How many copies of them are needed to build a copy scaled by a factor of 3\,?
+\vskip.1cm
+\hskip1cm  Interval: $ 3^1=3$, \, \, square: $3^2=9$, \, \, cube: $3^3=27$
+ \vskip.5cm
+
+
+
+If  $N$ copies of an object are needed to build its copy scaled by a factor of $S$
+\vskip.1cm
+{\it (if an object is built of $N$ copies of itself scaled by a factor of $\,1/S$)},
+\vskip.1cm
+ then its \,{\bf similarity dimension}\,  is the number $d\,$  such that \,
+\vskip.1cm
+$S^d=N$,\,  that is, $\,d=\frac{\ln N}{\ln S}$.
+\vskip.3cm
+
+\vskip.3cm (!) This definition applies only to a narrow class of sets.
+
+
+\vskip.8cm
+
+
+Cantor set:   $\hskip2.9cm N=2,\quad S=3,\quad 3^d=2, \quad d=\frac {\ln 2}{\ln 3} \approx 0.63$
+\vskip.5cm
+
+Koch curve:   $\hskip2.7cm N= 4,\quad S= 3, \quad 3^d=4, \quad d=\frac {\ln 4}{\ln 3} \approx 1.26$
+\vskip.5cm
+
+1 $<d\,$(Sierpinski triangle) $< d\,$(Sierpinski carpet) $<2$
+\vskip.3cm 
+$2 < d\,$(Menger sponge) $<3$  \hskip3.5cm {\it Compute these dimensions.}
+}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
