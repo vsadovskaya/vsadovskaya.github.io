@@ -1,0 +1,76 @@
+
+\documentclass[12pt]{article}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+
+\textwidth19cm
+\hoffset=-2cm
+\addtolength{\textheight}{2cm}
+%\leftmargin 3cm
+%\rightmargin 3cm
+\voffset=-3cm
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+{\Large
+\hskip4.5cm 
+{ \bf { Mandelbrot Set}} 
+
+\vskip.7cm
+
+{\large
+For each complex number $c$ we define a quadratic map  
+$$
+  f_c: \C \to \C, \qquad f_{c\,} (z)= z^2+c. \hskip4cm
+$$
+We consider the orbit of \,0\, under this map, that is, the sequence  
+$$
+0, \; \;f_c(0), \;\;f_c^2(0), \;\;f_c^3(0), \;\; \dots \;. \hskip2cm
+$$
+\vskip.2cm
+
+The {\bf Mandelbrot set} $\bf M$ is the set of all complex numbers $c\,$ 
+\vskip.05cm
+for which this sequence is bounded.
+\vskip.5cm
+
+\underline{Question.} \, Which points are in $\bf M$?
+\vskip.5cm
+
+ ${\bf c=0}  \hskip1.5cm 0, \quad 0, \quad 0, \; ...\; $  \,  So\, $\bf 0\in \bf M$.
+\vskip.3cm
+
+ ${\bf c=1} \hskip1.5cm 0, \quad  1,\quad 1^2+1=2,\quad 2^2+1=5, \quad 5^1+1=26, \;... \quad $ 
+ So\, $\bf 1\notin \bf M$.
+\vskip.3cm
+
+ ${\bf c=-1}  \hskip1.1cm 0, \quad  -1,\quad 0, \quad -1, \; ...\quad  $   So\, $\bf{-1}\in \bf M$.
+\vskip.4cm
+
+ ${\bf c=i}  \hskip1.65cm 0, \;\;i,\;\; -1+i,\;\; -i, \;\; -1+i, \;\; -i, \;\; ... \quad $   So\, $\bf i\in \bf M$.
+
+
+
+
+}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

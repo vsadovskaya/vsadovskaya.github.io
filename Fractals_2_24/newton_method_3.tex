@@ -1,0 +1,78 @@
+
+\documentclass[12pt]{article}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+
+\textwidth19cm
+\hoffset=-2cm
+\addtolength{\textheight}{2cm}
+%\leftmargin 3cm
+%\rightmargin 3cm
+\voffset=-3cm
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+{\Large
+
+{ \bf {Newton's method for approximating  zeros of functions}} 
+
+\vskip.5cm
+
+{\large
+
+\vskip.1cm
+Let $g$ be a continuously differentiable function on $\R$. 
+\vskip.1cm
+Suppose that $\,\,g(x_*)=0$,\,\,\, $g'(x_*)\ne 0$,\,\,\,  and  $x_0$ is sufficiently close to $x_*$.\, 
+\vskip.2cm
+For $n\ge 0$,\,\, let   \,$x_{n+1}= x_n\,-$\,{\Large $\frac {g(x_n)}{g'(x_n)}$},\, \, that is 
+\vskip.2cm
+\hskip1cm $\,\,x_{n+1}=F(x_n)$,\,\, where $\,F(x)= x\,-$\,{\Large $\frac {g(x)}{g'(x)}$}.
+
+\vskip.35cm
+
+ Then the sequence   $\,x_n=F^n(x_0)$ converges to $x_*$.
+\vskip.5cm 
+
+$\bullet$ \, The same applies to a function $g:\C\to \C$.
+
+\vskip.6cm 
+
+\underline{Question.} \,  Given a zero $z_*$ of $g$,\, what does the set of numbers 
+\vskip.1cm
+\hskip2.6cm $z\in \C\,$ such that $\,F^n(z)\to z_*\, $ looks like?
+
+\vskip.7cm  
+\underline{Example 1.} \, $\,g(z)=z^2-1\,\,\,$ has two zeros, $-1$ and 1.
+\vskip.4cm
+\hskip1cm $F(z)=z\,-$\,{\Large $\frac{g(x)}{g'(x)}$} $= z\,-$\,{\Large $\frac{z^2-1}{2z}$} \, for $z\ne 0$
+\vskip.25cm
+\hskip1cm If $\,z=bi\ne 0$,\,  then $F(z)=d i$\,  and so $F^n(z)$ does not converge to 1 or $-1$.
+\vskip.25cm
+\hskip1cm If $\,z=x+iy\,$ with $\,x>0$,\, then $\,F^n(z)\to 1$.
+\vskip.25cm
+\hskip1cm If $\,z=x+iy\,$ with $\,x<0$,\, then $\,F^n(z)\to -1$.
+
+\vskip.7cm  
+}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

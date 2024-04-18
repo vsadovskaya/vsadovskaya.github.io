@@ -1,0 +1,76 @@
+
+\documentclass[12pt]{article}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+
+\textwidth19cm
+\hoffset=-2cm
+\addtolength{\textheight}{2cm}
+%\leftmargin 3cm
+%\rightmargin 3cm
+\voffset=-3cm
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+{\Large
+\hskip4cm 
+{ \bf {Julia Sets}} 
+
+\vskip.6cm
+
+{\large
+For a fixed complex number $c, \,$ let\,\, $f_{c\,} (z)= z^2+c.$ \hskip4cm
+\vskip.3cm  
+
+For each $z\in \C$ we consider its orbit, \,$\{f_c^{n}(z)\}=\{\,z, \, f_c(z), \, f_c^2(z), \,...\,\}$.
+\vskip.1cm 
+For some  $z\in C$, \,  $\{f_c^{n}(z)\}$ is bounded, and for some it is not. 
+\vskip.3cm 
+The {\bf Julia set} $\mathbf{J(f_c)}$ is the  {\bf boundary}\, of the set of points   
+\vskip.1cm 
+whose orbits under the map $f_c$ are bounded.  
+
+\vskip.6cm
+
+
+{\bf Example.} $\;{\bf c=0},\;\,$ $f_c(z)=z^2$.\, 
+\vskip.1cm
+The orbit of $z\;=\{z, z^2, z^4,  ...\}\,$ is bounded $\,\Leftrightarrow$ $\,|z|\le 1$. 
+\vskip.1cm
+So $J(f_0)$ is the unit circle $\{z:\; |z|=1\}$
+\vskip.5cm
+
+For {\bf $c$ close to 0},\,\,  $J_c$ is a closed curve without self-intersections,
+
+but now it is a fractal, with Hausdorff dimension $>1$.
+\vskip.5cm
+
+{\bf Note.} Often, we see picture of a {\bf filled} Julia set. 
+\vskip.05cm
+It is  the set of points   
+whose orbits under the map $f_c$ are bounded.  
+\vskip.05cm
+In the example, the filled Julia set is the disc $\{z:\; |z|\le 1\}$.
+\vskip.2cm
+On the next two slides, the black set is the filled Julia set, 
+\vskip.04cm
+and the Julia set is its boundary.
+
+
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
