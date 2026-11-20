@@ -1,0 +1,293 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+\usepackage{cancel}
+
+
+%\userpackage{mathtools}
+
+\textheight25.5cm
+\textwidth18cm
+\hoffset=-2.7cm
+\voffset=-2.7cm
+\addtolength{\textheight}{1cm}
+\leftmargin 3cm
+\rightmargin 3cm
+
+\def\u{\bold{u}}
+\def\R{\mathbb R}
+\def\Q{\mathbb Q}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\e{\varepsilon}
+\def\la{\lambda}
+\def\a{\alpha}
+\def\dd{\Delta}
+
+
+\pagestyle{empty}
+
+\def\QED{\hfill\hfill{\square}} 
+
+\begin{document}
+%\setlength{\parindent}{0pt}
+
+
+\hskip.5cm 
+\hskip4cm  {\bf Math  312H} \hskip.4cm  Lecture 18 \hskip.3cm 3/7/2025 \hskip.5cm 
+
+\vskip.5cm 
+
+ {\bf Countable and uncountable sets.}
+ \vskip.3cm 
+ 
+ We recall that a function $f$ from a set $X$ to a set $Y$ is called {\it bijective} (or a {\it bijection})  if it is  both
+ 
+ injective (one-to-one) and surjective  (onto).\, Such $f$ is also called a {\it one-to-one correspondence.}
+ \vskip.1cm
+ {\it Injective}\, means that $f(x_1)=f(x_2)$ implies $x_1=x_2$,\, equivalently,\,   $x_1\ne x_2$ implies $f(x_1)\ne f(x_2)$.
+ \vskip.05cm 
+{\it Surjective}\,  means that the range of $f$ is $Y$, i.e., for each $y\in Y$ there is $x\in X$  such that $y=f(x)$. 
+
+  
+  \vskip.3cm 
+{\bf Def.}\,  A set $X$ is called {\bf finite}\, if\, either $X=\varnothing$\, or\, for some $n\in \N$\, there exists a bijection 
+ \vskip.03cm 
+\hskip1.1cm from $X$ to the set $\{1, \dots, n\}$,\, i.e.,\, $X=\{x_1, \dots, x_n\}$.
+\vskip.1cm
+\hskip1.1cm   A set $X$ is called {\bf countably infinite}\, if  there exists a bijection  from $X$ to $\N$.
+\vskip.1cm
+{\it Note.\, This means that  the elements of $X$ can be listed as $\,\{x_1, x_2, x_3, \dots \}$.}
+\vskip.1cm
+\hskip1.1cm   A set $X$ is called {\bf countable}\, if  it is either finite or countably infinite.
+\vskip.1cm
+\hskip1.1cm  A set $X$ is called {\bf uncountable}\, if  it is not  countable.
+\vskip.1cm
+{\it Note.\, Intuitively, it is too large for its elements to be listed.}
+
+  \vskip.3cm 
+{\bf Examples.}\, 
+  \vskip.1cm 
+$\bullet$\,\, $\N$ is countably infinite, by definition.
+  \vskip.15cm 
+$\bullet$\,\, $\Z$  is countably infinite, since we can list all integers as follows \, $0, 1, -1, 2, -2, 3, -3, \dots$
+\vskip.05cm
+\hskip.55cm Exercise: Write a formula for this bijection $f:\Z\to \N$.
+
+  \vskip.2cm 
+$\bullet$\,\, $\Q$ is countable. For example, we can list all rational numbers following the diagonals 
+\vskip.05cm
+\hskip.55cm in the infinite table as shown, and skipping the numbers that already appeared. 
+
+
+  \vskip.2cm 
+ \hskip.8cm   0 $\rightarrow$ 1 $\rightarrow -1$ $\hskip.5cm 2 \hskip.4cm -2 \hskip.6cm 3 \hskip.4cm -3 \quad \dots$
+\hskip1cm  This way we get a bijection $f:\Q\to \N$.
+ 
+      \hskip2.2cm  $\swarrow$   \hskip.5cm  $\swarrow$  \hskip.4cm  $\swarrow$  \hskip.5cm  $\swarrow$   \hskip.4cm  $\swarrow$
+    
+    \hskip1.8cm  $\frac12\hskip.4cm  -\frac12\hskip.7cm   \cancel{\frac22}\hskip.3cm -\cancel{\frac22} \hskip.6cm \frac32 \hskip.4cm -\frac32 \quad \dots$
+    
+        \hskip2.2cm  $\swarrow$   \hskip.5cm  $\swarrow$  \hskip.4cm  $\swarrow$  \hskip.5cm  $\swarrow$   \hskip3.4cm 
+        
+   
+    \hskip1.8cm  $\frac13\hskip.4cm  -\frac13\hskip.7cm   \frac23\hskip.35cm -\frac23 \hskip.6cm \frac33 \hskip.35cm -\frac33 \quad \dots$
+\vskip.1cm
+         \hskip1.8cm  . \, . \, . \, .\hskip5cm  
+  \vskip.35cm 
+  
+
+$\bullet$\, The set $\,(0,1)=\{x\in \R:\, 0<x<1\}\,$ is uncountable.
+\vskip.15cm
+
+\hskip.55cm  {\it Proof.}\, Idea: Given any list of numbers in $(0,1)$, there is number in $(0,1)$ that is not 
+\vskip.05cm
+\hskip.55cm on this list. Therefore it is not possible to list all numbers in $(0,1)$.
+\vskip.05cm
+\hskip.55cm We will use decimal expansions. We recall that a number can have two decimal expansions:
+\vskip.05cm 
+\hskip.55cm   $0.a_1\,...\,\,a_{k-1} a_k\,\overline{9}$, where $a_k\ne 9$,\,\, equals  $0.a_1 \,...\,a_{k-1}(a_k+1)$.
+
+\vskip.15cm
+\hskip.55cm Let $x_1, x_2, x_3, \dots$ be a list of numbers from $(0,1)$:
+\vskip.2cm 
+\hskip1cm $x_1=0.\,a_{11}\,a_{12}\,a_{13}\,\dots$   \hskip2cm  We construct a number $\,b=0. b_1 b_2 b_3 \dots \in (0,1)$ 
+\hskip1cm  
+\vskip.05cm
+\hskip1cm $x_2=0.\,a_{21}\,a_{22}\,a_{23}\,\dots$  \hskip2cm that  is  not on this list. To make sure that we do not \vskip.05cm
+\hskip1cm $x_3=0.\,a_{31}\,a_{32}\,a_{33}\,\dots$   \hskip2cm get 
+ another  decimal  expansion for a number that is  
+
+\hskip1cm . \, . \ . \,   \hskip4.4cm  already there,  we avoid using 0 and 9.
+\vskip.1cm
+\hskip.55cm  Let $\,b_i=$ {\small $\begin{cases} 1, \; \text{if $a_{ii}\ne 1$}\\ 2, \; \text{if $a_{ii}=1$.} \end{cases}$} \,
+Then $\,b=0.b_1b_2b_3\dots \in (0,1)$,\,\, and for each $i\in \N$, \, $b\ne a_i$.
+
+
+
+
+   \vskip.4cm   
+   
+  {\bf Note:} Any subset of a countable set is countable. \, {\it (Why?)}
+ \vskip.05cm
+\hskip1.35cm Hence if a subset of $X$ is uncountable, then $X$ is uncountable.
+ 
+   \vskip.3cm   
+
+$\bullet$\, $\R$ is uncountable.
+  \newpage
+  
+  %%%%%%%%%%%%
+      
+      
+      {\bf Open and closed sets.}
+      \vskip.2cm 
+      Basic examples:\,\, open and closed intervals $(a,b)$ and $[a,b]$\, in $\R$.
+      \vskip.4cm
+      
+      For every $x\in (a,b)$ there is $r>0$\, such that the interval $(x-r,\, x+r)$\, is contained in $(a,b)$.
+      \vskip.05cm
+      We can take $\,r=\min \{x-a, \, b-x\}$.\, The interval $(x-r,\, x+r)$ is the open ball $B_r(x)$ in $\R$.
+   
+     \vskip.25cm 
+{\bf Def.}\,\,\,  A set $U$ in a metric space $(M,d)$ is {\bf open} if\, for every $x\in U$\, there exists $r>0$ 
+\vskip.05cm
+\hskip1.35cm such that  the open ball $B_r(x)$ is contained in $U$.
+     \vskip.25cm 
+{\bf Note.}  The empty set $\varnothing$\, and the whole space $M$ are open in $(M,d)$,  \,trivially.   
+       
+  
+            \vskip.25cm 
+          
+          {\bf Proposition.} Any open ball $B_t(y)$ in  $(M,d)$ is an open set.
+ \vskip.2cm
+  
+  {\it Proof.}     Let $x\in B_t(y)$. We want to find $r$ such that $B_r(x)\subseteq B_t(y)$. {\it (Draw the picture in $\R^2$)}
+            \vskip.08cm  
+\hskip.5cm  {\it (Inspired by the picture)}\,\, Let $\,r=t-d(x,y)$.\, Then $r>0$\, and for any $z\in B_r(x)$ we have 
+             \vskip.08cm  
+\hskip.5cm    $d(z,y)\le \,d(z,x)+d(x,y)<\, r+d(x,y)=t-d(x,y)+d(x,y)=t$,\, and hence $z\in B_t(y)$.
+             \vskip.1cm  
+ \hskip.5cm   Thus $B_r(x)\subseteq B_t(y)$.\, Therefore $B_t(y)$ is an open set.  $\QED$
+          \vskip.6cm 
+          
+   For a closed interval $[a,b]$ in $\R$,
+             \vskip.05cm   
+  \hskip1cm   its complement $(-\infty, a)\cup (b,\infty)$\, is open, and
+                 \vskip.07cm  
+  \hskip1cm   for any sequence $(s_n)$ in $[a,b]$\, that converges in $\R$, \, $\lim s_n\in [a,b]$.
+  \vskip.25cm 
+  
+  
+{\bf Def.}\,  A set $E$ in a metric space $(M,d)$ is {\bf closed} if\, its complement $M\setminus E$\, is open.
+     
+          \vskip.25cm 
+   {\bf Note.} The empty set $\varnothing$\, and the whole space $M$ are closed in $(M,d)$. 
+       
+          
+ 
+      
+                \vskip.3cm 
+{\bf Theorem.}\, A set $E$ in $(M,d)$ is closed, that is, $M\setminus E$ is open,\, if and only if\, \vskip.05cm
+   \hskip2.3cm  for any sequence of $(s_n)$ in $E$ that 
+  converges in $M$,\, the limit is in $E$.  \,  $(*)$
+
+   
+  \vskip.2cm
+  
+  
+  {\it Proof.}  $(\Rightarrow)$\, Suppose that $M\setminus E$ is open. Let $s\in M\setminus E$. Then there is $r>0$ such that 
+   \vskip.05cm 
+\hskip1.3cm   
+  $B_r(s)\subseteq  M\setminus E$,\, and so $B_r(x)$ does not contain any points of $E$. It follows that 
+     \vskip.05cm 
+\hskip1.3cm  a sequence of points in $E$ cannot converge to $s$.  {\it (Why?)}\, Thus $(*)$ holdes.
+  
+  
+  
+ \vskip.2cm 
+  
+\hskip1.3cm   $(\Leftarrow)$\, {\it (By contraposition.)}\,  Suppose that the set $M\setminus E$\, is not open.  Then for  some $x\in M\setminus U$ 
+   \vskip.05cm 
+\hskip1.3cm 
+ there is no $r>0$\, such that $B_r(x) \subseteq M\setminus E$,\, that is,\, for each $r>0$,\, $B_r(x)$ intersects $E$.  
+   \vskip.05cm 
+\hskip1.3cm  Then for each $n\in N$ there is $s_n\in E$\, such that   $s_n\in B_{1/n}(x)$,\, that is,\, $d(s_n,s)<\frac1n$.\,
+   \vskip.05cm 
+\hskip1.3cm  Then $(s_n)$ is a sequence in $E$ converging to $s\notin E$,\, and so $(*)$ does not hold.
+ $\QED$
+
+
+          \vskip.35cm 
+   {\bf Note.} A set can be both open and closed (for example $M$ and $\varnothing$), open but not closed, 
+   
+
+   
+  \hskip1.35cm    closed but not open,   or neither open nor closed  (for example $[a,b)$ in $\R$.)
+  
+  \hskip1.35cm    In $\R$ with the standard metric, only the whole space and $\varnothing$ are both open and closed,
+
+  \hskip1.35cm    but in other metric spaces there may be other sets that are both open and closed.
+  
+  
+     \vskip.35cm 
+   
+{\bf (?)} Are the following sets in $\R$ open, closed, or neither.
+
+
+            \vskip.19cm 
+       
+       (a) $\, [a,\infty)$  \,--\, closed \,  {\it (Why?)}
+              \vskip.2cm     
+       (b) $\,S=\{\frac1n: n\in \N\}$ \,--\,  neither.   
+    \vskip.05cm   
+ \hskip1.2cm       It is not open since $1\in S$,\, but there is no $r>0$ such that $(1-r,1+r)\subseteq S$.
+ 
+  \hskip1.2cm     It is not closed since the sequence $(\frac1n)$ in $S$ converges to $0\notin S$.
+               \vskip.2cm    
+        (c)\, $\{\frac1n: n\in \N\}\cup\{0\}$ \,--\,   closed,\, since its complement is a union of open intervals, and hence open.
+ \vskip.2cm  
+ 
+ (d)\, $\Q$  \,--\, neither.\,\,   It is not open since $0\in \Q$,\, but for every $r>0$,\,  $B_r(0)=(1-r,1+r)$ contains 
+ 
+  \hskip1.2cm    an irrational number and so $(1-r,1+r)\not\subseteq \Q$.\, It is not closed since a sequence of rational 
+  
+  \hskip1.2cm     numbers  can converges to an irrational number.
+               \vskip.15cm    
+
+  \newpage 
+\end{document}  
+  
+    {\bf Proposition.} Any finite $E$ set in $(M,d)$ is closed.
+          
+  \vskip.2cm
+  
+{\it Proof.}   Clear for $E=\varnothing.$\, Let $E=\{e_1, ..., e_n\}$ let $x\in U=M\setminus D$  ...   
+            \vskip.25cm    
+   {\bf Theorem.} (unions and intersections.)  
+                \vskip.1cm  
+       \hskip2.2cm   (i) The union of \underline{any} collection of open sets in $(M,d)$ is open.
+                  \vskip.1cm  
+     \hskip2.1cm  (ii)    The intersection of \underline{finitely many} open sets  in $(M,d)$ is open.
+             \vskip.1cm  
+             \hskip2cm  (iii) The union of \underline{finitely many} closed sets in $(M,d)$ is closed.
+     \vskip.05cm
+   \hskip2cm  (iv) The intersection of \underline{any} collection of closed sets  in $(M,d)$ is closed.
+
+              \vskip.25cm  
+             
+{\it Proof.}\,   (i), (ii) Exercise. 
+               \vskip.05cm     
+  \hskip1.4cm  
+  (iii), (iv) follow from the properties of open sets and de Morgan laws: 
+               \vskip.05cm     
+  \hskip2.5cm    for any collection of sets $E_i$, $i\in I$, in $M$
+            \vskip.1cm        
+   \hskip2.5cm        $M\setminus \bigcup_{i\in I} E_i= \bigcap_{i\in I} (M\setminus E_i)$ \, and \,  $M\setminus \bigcap_{i\in I} E_i= \bigcup_{i\in I} (M\setminus E_i)$.
+               \vskip.15cm        
+   \hskip2.5cm    (Explain how.) 
+
+
+     
+            
+

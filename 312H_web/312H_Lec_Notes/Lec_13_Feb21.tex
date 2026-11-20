@@ -1,0 +1,243 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb,amscd}
+\usepackage{euscript}
+
+\textheight25.5cm
+\textwidth17.2cm
+\hoffset=-2.5cm
+\voffset=-2.8cm
+\addtolength{\textheight}{1cm}
+\leftmargin 3cm
+\rightmargin 3cm
+
+\def\u{\bold{u}}
+\def\R{\mathbb R}
+\def\Q{\mathbb Q}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\dist{\text{dist}}
+\def\e{\varepsilon}
+
+
+\def\QED{\hfill\hfill{\square}}  
+
+\pagestyle{empty}
+
+\begin{document}
+%\setlength{\parindent}{0pt}
+
+
+ {\bf Math  312H} \hskip.4cm  Lecture 13 \hskip.3cm 2/21/2025 \hskip.5cm 
+ \vskip.3cm
+ 
+ {\bf Bolzano-Weierstrass Theorem.\, Limits of subsequences.}   
+ \vskip.25cm
+
+
+       \vskip.35cm
+       
+  {\bf Last time:}\, If a sequence $(s_n)$ has a divergent subsequence, or two subsequences 
+   \vskip.05cm 
+\hskip2.4cm  converging to  different limits,\, then $(s_n)$ diverges.
+\vskip.35cm
+
+       
+   {\bf Example.}\, Let $\,s_n=\cos\frac{n\pi}{100}$.\,    Then
+   \vskip.1cm
+\hskip2.2cm  $s_{200k}=\cos (2\pi k)=1$\, for all $k$,\, and so the subsequence $(s_{200k})$ converges to 1, and 
+   \vskip.1cm
+\hskip2.2cm  $s_{200k+100}=\cos (2\pi k+\pi)=-1$\, for all $k$,\, and so  $(s_{200k+100})$ converges to $-1$.
+   \vskip.1cm
+\hskip2.2cm  Since $(s_n)$ has two subsequences converging to different limits,\, it diverges.
+
+
+\vskip.7cm
+
+{\bf T/F}  \, Every sequence in $\R$ has a convergent subsequence.
+   \vskip.1cm
+\hskip1.2cm {\it False.}  \, Let $s_n=n$.\, Then every subsequence of $(s_n)$ diverges to $+\infty$.
+
+ \vskip.4cm
+
+{\bf Bolzano-Weierstrass Theorem.} \,
+\vskip.08cm
+Every  \underline{bounded} sequence in $\R$ has a convergent subsequence.
+
+\vskip.3cm 
+
+{\it Proof}. Let $(s_n)$ be a bounded sequence in $\R$. 
+\vskip.06cm \hskip.6cm 
+We will construct a Cauchy subsequence of $(s_n)$ inductively.\, Since $(s_n)$ is bounded, 
+\vskip.06cm  \hskip.6cm 
+there exists $M>0$\, such that for all $n\in \N$, \, $\,|s_n|\le M$\, and hence $\,-M\le s_n\le M$.
+\vskip.06cm  \hskip.6cm 
+Let $I_1=[-M, M]\,$ and let $\,n_1=1$.
+\vskip.06cm  \hskip.6cm 
+We divide $I_1$ into halves\, and denote a half with infinitely many terms of $(s_n)$ by $I_2$.
+\vskip.06cm  \hskip.6cm 
+We choose $n_2>n_1\,$ such that $\,s_{n_2}\in I_2$.
+\vskip.06cm  \hskip.6cm 
+Suppose that intervals $\,I_1\supset I_2\supset \dots \supset I_k\,$ and numbers $\,n_1<n_2<\dots <n_k$ are chosen.
+\vskip.06cm  \hskip.6cm 
+We divide $I_k$ into halves, denote a half with infinitely many terms of $(s_n)$ by $I_{k+1}$, 
+\vskip.06cm  \hskip.6cm 
+and choose $\,n_{k+1}>n_k\,$ such that $\,s_{n_{k+1}}\in I_{k+1}$.
+\vskip.06cm  \hskip.6cm 
+Thus we obtain a subsequence $(s_{n_k})$ of $(s_n)$.
+\vskip.06cm  \hskip.6cm 
+For each $N\in \N$,\,\,  $s_{n_k}\in I_N$\, for all $k\ge N$,\,\,  and $\,\, |I_N|=$ {\large $\frac{2M}{2^{N-1}}$}  $ \to 0$ as $N\to\infty$.
+\vskip.06cm  \hskip.6cm 
+It follows that $(s_{n_k})$ is Cauchy {\it (Explain)},\, and hence  $(s_{n_k})$ converges.  $\QED$
+
+ \vskip.4cm
+ 
+ {\bf Remarks}  
+ \vskip.15cm 
+$\,\,\bullet$ \,Using the same approach, one can show that any bounded sequence $(s_n)$ in $\R^2$ 
+ \vskip.03cm
+ \hskip.6cm  has a convergent subsequence. We observe that $(s_n)$ is contained in a square, 
+  \vskip.03cm
+  \hskip.6cm  and then at each step we divide the square into 4 equal squares.
+ \vskip.15cm 
+$\,\,\bullet$ \,In the book a different proof of Bolzano-Weierstrass Theorem is given.
+ \vskip.03cm
+ \hskip.6cm First, it is proved that any sequence in $\R$ has a monotone subsequence (Theorem 11.4),
+ \vskip.03cm
+ \hskip.6cm and then the theorem that every bounded monotone sequence in $\R$ converges is applied.
+
+ \vskip.8cm
+
+{\bf Limits of subsequences.}
+
+\vskip.3cm
+
+Let $(s_n)$ be a sequence in $\R$. A {\it subsequential limit}\, of $(s_n)$ is the limit of  a subsequence of $(s_n)$.
+ \vskip.03cm
+It can be a real number, $\infty$, or $-\infty$.
+\vskip.4cm
+
+   {\bf Examples.} \, $s_n=\cos\frac{n\pi}{4}+\frac1n.$ \,\, Subsequential limits:  $-1$, $-\frac{\sqrt{2}}{2}$,\, 0, $-\frac{\sqrt{2}}{2}$,\, 1.
+    \vskip.25cm
+ \hskip2.4cm  \, $s_n=(-n)^n.$ \,\, Subsequential limits: $-\infty$ and $\infty$.
+ 
+ 
+
+\newpage 
+   {\bf Theorem.}  Let $(s_n)$ be a bounded sequence in $\R$.
+    \vskip.05cm
+   Then $\,\limsup s_n$\, is the largest  subsequential limit of $(s_n)$,\,  and $\,\liminf s_n$\, is the smallest.
+   
+   \vskip.3cm 
+
+{\it Proof for $limsup.$} \, Since $(s_n)$ is bounded, $\,b=\limsup s_n\in \R$.
+
+   \vskip.2cm  
+   
+(1)  \,\,For each $\e>0$\, there exists $N\in \N$ such that\, $s_n<b+\e\,$ for all $n>N$.   
+
+    \vskip.15cm 
+    \hskip.8cm {\it Proof.}\,   Let $\e>0$.\, Since $\,b=\underset{N\to\infty}\lim \sup \{s_n:\, n>N\}$,\, there exists $N\in \N$\, such that
+    
+       \vskip.05cm 
+    \hskip.8cm  $\sup \{s_n:\, n>N\}< b+\e$,\,\, and hence $\,s_n<b+\e\,$ for all $n>N$.
+   
+
+   \vskip.3cm  
+   
+(2) \,\,For each $\e>0$\, there are infinitely many $n$\, such that\, $s_n>b-\e$. 
+      \vskip.15cm 
+   \hskip.8cm {\it Proof.}\, Suppose that for some $\e>0$\, there are only finitely many such $n$.
+\vskip.05cm 
+   \hskip.8cm  Then there exists $N_1$\, such that $\,s_n\le b-\e\,$ for all $n> N_1$.
+ Then for all $N>N_1$,\,\, 
+     \vskip.05cm 
+   \hskip.8cm  $v_N=\sup \{s_n:\, n>N\}\le b-\e$, \,and hence $\,b=\lim v_n\le b-\e$,\, which is impossible.
+ 
+    \vskip.3cm  
+
+(3)\,\,  There is a subsequence $(s_{n_k})$  of $(s_n)$ converging to $b$.
+   
+         \vskip.15cm 
+   \hskip.8cm {\it Proof.}\, We inductively construct $(s_{n_k})$ such that for each $k\in \N$, \, $|s_{n_k}-b|<\frac1k$.
+     \vskip.05cm 
+   \hskip.8cm 
+   Then it follows that $s_{n_k}\to b$. \, {\it (Explain.)} \,  By (1) and (2), or each $\e>0$\, 
+     \vskip.05cm 
+   \hskip.8cm  there are  infinitely many $n$\,  such that\, $b-\e< s_n<b+\e$,\, that is,  $\,|s_n-b|<\e$. 
+   \vskip.05cm 
+   \hskip.8cm   We choose $n_1$\, such that $\,|s_{n_1}-b|<1$.
+   \vskip.05cm 
+   \hskip.8cm Suppose that $\,n_1<\dots <n_k$\, are chosen so that $\,|s_{n_i}-b|<\frac{1}{i}$\, for $i=1, \dots, k.$
+   
+      \vskip.05cm 
+   \hskip.8cm Since there are infinitely many $n$ such that $\,|s_{n}-b|<\frac{1}{k+1}$,\, we can choose $\,n_{k+1}>n_k\,$
+      
+      \vskip.05cm 
+   \hskip.8cm such that $\,|s_{n_{k+1}}-b|<\frac{1}{k+1}$.
+   
+       \vskip.3cm  
+
+(4)\,\, $(s_n)$ does not have a subsequence with $(s_{n_k})$\, with $\,\lim s_{n_k}>b$.
+
+         \vskip.1cm 
+   \hskip.8cm {\it Proof.}\, Exercise.  
+   
+\vskip.2cm  
+
+Now the result follows from (3) and (4). $\QED$
+
+   \vskip.6cm 
+   
+   {\bf Question.} How many subsequential limits can a sequence $(s_n)$ in $\R$  have?
+\vskip.2cm 
+  \hskip.8cm  For any $N\in \N$\, there is a sequence with exactly $N$ subsequential limits,\, 
+  
+   \hskip.8cm   for example\, $(s_n)=(1, 2, \dots, N, 1, 2, \dots, N,\dots).$
+  \vskip.2cm   
+   \hskip.8cm  Can  $(s_n)$ have infinitely many subsequential limits?
+     \vskip.2cm   
+{\bf Claim.}  There is a sequence in $\R$ such that \underline{every} $s\in \R$\, is its subsequential limit.
+            \vskip.15cm 
+   \hskip.8cm {\it Proof.}\, We construct a sequence $(s_n)$ that contains every rational number as follows.
+         \vskip.05cm 
+     \hskip.8cm First we list all fractions $\frac{m}{n}$, where $m,n\in \Z$ and $n\ne 0$,\, in an infinite table
+           \vskip.05cm 
+        \hskip.8cm and then we list the fractions following the diagonals
+         \vskip.2cm 
+ \hskip.8cm   0 $\rightarrow$ 1 $\rightarrow -1$ $\hskip.5cm 2 \hskip.4cm -2 \hskip.6cm 3 \hskip.4cm -3 \quad \dots$
+ 
+      \hskip2.2cm  $\swarrow$   \hskip.5cm  $\swarrow$  \hskip.4cm  $\swarrow$  \hskip.5cm  $\swarrow$   \hskip.4cm  $\swarrow$
+    
+    \hskip1.8cm  $\frac12\hskip.4cm  -\frac12\hskip.7cm   \frac22\hskip.3cm -\frac22 \hskip.6cm \frac32 \hskip.4cm -\frac32 \quad \dots$
+    
+        \hskip2.2cm  $\swarrow$   \hskip.5cm  $\swarrow$  \hskip.4cm  $\swarrow$  \hskip.5cm  $\swarrow$   \hskip3.4cm So  $(s_n)=$
+   
+    \hskip1.8cm  $\frac13\hskip.6cm  -\frac13\hskip.7cm   \frac23\hskip.5cm -\frac23 \hskip.6cm \frac33 \hskip.55cm -\frac33 \quad \dots$
+   \hskip1cm  $(0,\,1,\,-1,\, \frac12,\, 2,\, -\frac12,\, \frac13,\, -2,\, \frac22,\, -\frac13,\, \frac14, \, 3,\dots)$
+\vskip.2cm
+    
+         \hskip1.8cm  . \, . \, . \, .\hskip5cm 
+       
+           \vskip.3cm  
+           
+          \hskip.8cm  For every $s\in \R$\, there is a subsequence $(s_{n_k})$ of $(s_n)$ converging to $s$.  
+           
+                      \vskip.05cm    
+                 \hskip.8cm     This can be proved using an approach similar to (3) above (Homework). 
+          
+                      \vskip.05cm    
+         \hskip.8cm   Since $(1,\,2,\,3,\, \dots)$ and $(-1,-2,-3,\, \dots)$ are subsequences of $(s_n)$, \, 
+      $\infty$ and $-\infty$ are also
+                 \vskip.05cm  
+         \hskip.8cm  its  subsequential limits.  Thus the set of subsequential limits of $(s_n)$ is $\,\R\cup\{\infty, -\infty\}$.
+    
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+ For each $k\in \N$,\, there are infinitely many rational numbers in $(s-\frac1k, s+\frac1k)$, 
+           \vskip.05cm    
+         \hskip.8cm      
+          and hence infinitely many $n$ such that $\,s_n\in (s-\frac1k, s+\frac1k)$.\,   As in (3), we can construct
+      \vskip.05cm    
+         \hskip.8cm  a subsequence $(s_{n_k})$ of $(s_n)$ such that for each $k\in \N$, \,
+ $|s_{n_k}-b|<\frac1k$, \,  and hence $s_{n_k}\to s.$  \, 
